@@ -8,6 +8,7 @@ import android.util.LruCache;
  * 图片LruCache缓存、图片压缩、解压
  *
  * Created by wanzihui on 2017/3/16.
+ * 地址：郭霖 http://blog.csdn.net/guolin_blog/article/details/10470797
  */
 public class ImageLoader {
 
