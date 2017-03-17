@@ -2,16 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
 
-    <GridView
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/gd_photowall"
-        android:columnWidth="150dp"
-        android:stretchMode="columnWidth"
-        android:numColumns="3"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
-        android:gravity="center" />
+        android:text="照片墙"
+        android:id="@+id/btn_photowall"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="照片墙瀑布(不规则)"
+        android:id="@+id/btn_photofalls"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
