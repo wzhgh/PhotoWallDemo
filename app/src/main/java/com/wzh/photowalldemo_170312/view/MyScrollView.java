@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -30,6 +31,7 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.wzh.photowalldemo_170312.R;
+import com.wzh.photowalldemo_170312.activity.SingleImageActivity;
 import com.wzh.photowalldemo_170312.util.ImageLoader;
 import com.wzh.photowalldemo_170312.util.ImageUtils;
 
@@ -349,6 +351,14 @@ public class MyScrollView extends ScrollView implements OnTouchListener {
                 imageView.setScaleType(ScaleType.FIT_XY);
                 imageView.setPadding(5, 5, 5, 5);
                 imageView.setTag(R.string.image_url, mImageUrl);
+                imageView.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent it = new Intent(MyScrollView.this.getContext(), SingleImageActivity.class);
+                        it.putExtra("image_path", getImagePath(mImageUrl));
+                        MyScrollView.this.getContext().startActivity(it);
+                    }
+                });
                 findColumnToAdd(imageView, imageHeight).addView(imageView);
                 imageViewList.add(imageView);
             }

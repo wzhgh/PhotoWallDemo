@@ -21,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.PhotoFallsActivity" />
-        <activity android:name=".activity.PhotoWallActivity"></activity>
+        <activity android:name=".activity.PhotoWallActivity" />
+        <activity android:name=".activity.SingleImageActivity"></activity>
     </application>
 
 </manifest>
